@@ -1,7 +1,7 @@
 import nltk
 import nltk.chat
 from nltk.chat.util import Chat, reflections
-from pairs import language_pairs
+from language_pairs import pairs
 
 
 def Butler():
