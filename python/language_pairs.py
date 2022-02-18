@@ -4,6 +4,12 @@ pairs = [
         ["Hello %1, How are you feeling today?", ]
     ],
     [
+        
+        r"I am a bit concerned about this recent stock market fiasco",
+        ["Do not be alarmed sir, I've handled your investments accordingly",]
+        
+    ],
+    [
         r"what is your name ?",
         ["My name is Butler, how may I be of service?", ]
     ],
