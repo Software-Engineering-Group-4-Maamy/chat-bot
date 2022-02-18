@@ -4,13 +4,13 @@ from nltk.chat.util import Chat, reflections
 from language_pairs import pairs
 
 
-def Butler():
-    print("Hi, I'm Butler want to have a conversation with you!\nPlease speak to me in lowercase English. Type quit if you wish to end this conversation. ")
+def Botler():
+    print("Hi, I'm Botler want to have a conversation with you!\nPlease speak to me in lowercase English. Type quit if you wish to end this conversation. ")
     chat = Chat(pairs, reflections)
     chat.converse()
 
 def main():
-    Butler()
+    Botler()
 
 
 if __name__ == "__main__":
