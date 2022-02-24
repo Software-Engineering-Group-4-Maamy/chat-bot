@@ -17,16 +17,10 @@ The MIT liscence is in this same direcory and is named LICENSE.
         //I can only implement the convorsation, once I have the program its self. I will implement that part of the read me when I am doing the CHATBOT test
 
 ## Sample output
-`[matthewobirek@MatthewPC chat-bot]$ ls`
-
-`LICENSE  README.md  Temp.text`
-
-`[matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete README.md"`
-
-`fatal: 'Complete README.md' is not a valid branch name`
-
-`[matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete_README.md"`
-
-`Switched to a new branch 'Complete_README.md'`
-
-`[matthewobirek@MatthewPC chat-bot]$ `
+        `[matthewobirek@MatthewPC chat-bot]$ ls`
+        `LICENSE  README.md  Temp.text`
+        `[matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete README.md"`
+        `fatal: 'Complete README.md' is not a valid branch name`
+        `[matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete_README.md"`
+        `Switched to a new branch 'Complete_README.md'`
+        `[matthewobirek@MatthewPC chat-bot]$ `
