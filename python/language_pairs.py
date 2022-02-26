@@ -30,7 +30,7 @@ pairs = [
         ["Salutations!", "Greetings!", ]
     ],
     [
-        r"quit|kill yourself",
+        r"quit",
         ["Farewell, have a fantastic day ", "Until we speak again."]
     ],
     [
