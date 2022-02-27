@@ -6,19 +6,29 @@ Our group has decide to create a chatbot using python. We have used the <a href=
 The MIT liscence is in this same direcory and is named <a href="https://github.com/Software-Engineering-Group-4-Maamy/chat-bot/blob/main/LICENSE" target="_blank">LICENSE</a>. 
 
 ## Instalation guide
-1. First, clone this git reposotory, or download the zip file. 
-2. Run the main.py File
-3. Vouala - you now own a human soul.
+1. First, install <a href="https://pip.pypa.io/en/stable/installation/">pip</a> if you have not already
+2. Run `pip install --user -U nltk`
+3. Then, clone this git reposotory, or download the zip file. 
+4. Inside the python directory, run the main.py file `python main.py`
+5. Vouala - you now own a human soul.
 
 ## Sample output
 
-        //I can only implement the conversation, once I have the program its self. 
-        //I will implement that part of the read me when I am doing the CHATBOT test
-        
-        [matthewobirek@MatthewPC chat-bot]$ ls
-        LICENSE  README.md  Temp.text
-        [matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete README.md"
-        fatal: 'Complete README.md' is not a valid branch name
-        [matthewobirek@MatthewPC chat-bot]$ git checkout -b "Complete_README.md"
-        Switched to a new branch 'Complete_README.md'
-        [matthewobirek@MatthewPC chat-bot]$ 
+        Hi, I'm Botler want to have a conversation with you!
+        Please speak to me in lowercase English. Type quit if you wish to end this conversation. 
+        hello
+        Greetings!
+        my name is Matthew
+        Hello matthew, How are you feeling today?
+        I am a bit concerned about this recent stock market fiasco
+        Do not be alarmed sir, I've handled your investments accordingly
+        sorry for ever doubting you
+        You needn't worry at all
+        can you find the next best stock for me
+        I am unable to search for the next best stock, for now.
+        sorry for expecting so much
+        You needn't worry at all
+        have you seen my underwear?
+        I believe you left it under your bed again sir
+        quit
+        Thank you for chatting with me
