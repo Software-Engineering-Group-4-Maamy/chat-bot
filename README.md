@@ -30,5 +30,34 @@ The MIT liscence is in this same direcory and is named <a href="https://github.c
         You needn't worry at all
         have you seen my underwear?
         I believe you left it under your bed again sir
+        I like underwear  
+        Exquisite taste sir
+        i am not a sir
+        Apologies, but sir it is the best I can do.
+        you're being difficult
+        You literally programed me, I can only say what you allowed me to say
+        i love you botler, and you have to love me back
+        That is sweet sir, but I only think of you as a an aquaintence
+        that was mean
+        I am doing my best to be polite, you are just making it difficult
+        yes    
+        Glad we agree
+        sorry botler, i was argumentative
+        It is already forgiven.
+        can you make me happy
+        Of course, sire, I will get you happy but first I'll need milk, brb
+        how long will it take you to make me happy
+        I cannot say, an hour, a week maybe a decade.  You must find it in yourself to wait
         quit
         Thank you for chatting with me
+
+## Class Organization
+1. Botler:
+The Botler class is incharge of creating and maintaining all aspects of the chat object imported from the NLTK.
+
+The Botler class has two members within it. `def __init__(self)` and `def converse(self)`. 
+
+The `def __init__(self)` member acts as the Constructor for the Botler object. It creates the chat object as well.
+
+The `def converse(self)` member starts the conversation with a custome message. It also includes all of the error handling and logic required for the main conversation to take place with the chat bot
+to start a conversation, write this line of code: `ch.Botler().converse()`
