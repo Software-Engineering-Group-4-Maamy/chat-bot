@@ -5,7 +5,7 @@ pairs = [
     ],
     [
         
-        r"I am a bit concerned about this recent stock market fiasco",
+        r"i am a bit concerned about this recent stock market fiasco",
         ["Do not be alarmed sir, I've handled your investments accordingly",]
         
     ],
