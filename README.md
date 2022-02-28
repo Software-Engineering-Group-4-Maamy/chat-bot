@@ -51,13 +51,13 @@ The MIT liscence is in this same direcory and is named <a href="https://github.c
         U:quit
         B:Thank you for chatting with me
 ### Errors in output
-        U:I am well
+        U:that was MEAN
         B:Sorry sir, I didn't understand
-Botler Responds this way because Botler does not understand the wellness of others, only the ups and downs of the economie.
+Botler responds this way because Botler does not understand capital letters. The user must put all inputs as lowercase english
 
         U:what's your favotite movie
         B:Sorry sir, I didn't understand
-Botler Responds this way because Botler is to young to know what movies are.
+Botler responds this way because Botler cannot recognize a phraze that is not exactly the same as what it uses as examples.
 ## Class Organization
 1. Botler:
 The Botler class is incharge of creating and maintaining all aspects of the chat object imported from the NLTK.
