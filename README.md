@@ -14,43 +14,50 @@ The MIT liscence is in this same direcory and is named <a href="https://github.c
 
 ## Sample output
 
-        Hi, I'm Botler want to have a conversation with you!
-        Please speak to me in lowercase English. Type quit if you wish to end this conversation. 
-        hello
-        Greetings!
-        my name is Matthew
-        Hello matthew, How are you feeling today?
-        I am a bit concerned about this recent stock market fiasco
-        Do not be alarmed sir, I've handled your investments accordingly
-        sorry for ever doubting you
-        You needn't worry at all
-        can you find the next best stock for me
-        I am unable to search for the next best stock, for now.
-        sorry for expecting so much
-        You needn't worry at all
-        have you seen my underwear?
-        I believe you left it under your bed again sir
-        I like underwear  
-        Exquisite taste sir
-        i am not a sir
-        Apologies, but sir it is the best I can do.
-        you're being difficult
-        You literally programed me, I can only say what you allowed me to say
-        i love you botler, and you have to love me back
-        That is sweet sir, but I only think of you as a an aquaintence
-        that was mean
-        I am doing my best to be polite, you are just making it difficult
-        yes    
-        Glad we agree
-        sorry botler, i was argumentative
-        It is already forgiven.
-        can you make me happy
-        Of course, sire, I will get you happy but first I'll need milk, brb
-        how long will it take you to make me happy
-        I cannot say, an hour, a week maybe a decade.  You must find it in yourself to wait
-        quit
-        Thank you for chatting with me
+        B:Hi, I'm Botler want to have a conversation with you!
+        B:Please speak to me in lowercase English. Type quit if you wish to end this conversation. 
+        U:hello
+        B:Greetings!
+        U:my name is Matthew
+        B:Hello matthew, How are you feeling today?
+        U:I am a bit concerned about this recent stock market fiasco
+        B:Do not be alarmed sir, I've handled your investments accordingly
+        U:sorry for ever doubting you
+        B:You needn't worry at all
+        U:can you find the next best stock for me
+        B:I am unable to search for the next best stock, for now.
+        U:sorry for expecting so much
+        B:You needn't worry at all
+        U:have you seen my underwear?
+        B:I believe you left it under your bed again sir
+        U:I like underwear  
+        B:Exquisite taste sir
+        U:i am not a sir
+        B:Apologies, but sir it is the best I can do.
+        U:you're being difficult
+        B:You literally programed me, I can only say what you allowed me to say
+        U:i love you botler, and you have to love me back
+        B:That is sweet sir, but I only think of you as a an aquaintence
+        U:that was mean
+        B:I am doing my best to be polite, you are just making it difficult
+        U:yes    
+        B:Glad we agree
+        U:sorry botler, i was argumentative
+        B:It is already forgiven.
+        U:can you make me happy
+        B:Of course, sire, I will get you happy but first I'll need milk, brb
+        U:how long will it take you to make me happy
+        B:I cannot say, an hour, a week maybe a decade.  You must find it in yourself to wait
+        U:quit
+        B:Thank you for chatting with me
+### Errors in output
+        U:I am well
+        B:Sorry sir, I didn't understand
+Botler Responds this way because Botler does not understand the wellness of others, only the ups and downs of the economie.
 
+        U:what's your favotite movie
+        B:Sorry sir, I didn't understand
+Botler Responds this way because Botler is to young to know what movies are.
 ## Class Organization
 1. Botler:
 The Botler class is incharge of creating and maintaining all aspects of the chat object imported from the NLTK.
