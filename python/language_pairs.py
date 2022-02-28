@@ -1,5 +1,5 @@
+"""All the input and responses that the chatbot can receive and give"""
 pairs = [
-    """All the input and responses that the chatbot can receive and give"""
     [
         r"my name is (.*)",
         ["Hello %1, How are you feeling today?", ]
