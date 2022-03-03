@@ -137,5 +137,33 @@ pairs = [
     [
         r"will you marry me",
         ["No"]
-    ]
+    ],
+    [
+        r"i want to (.*)",
+        ["What would it mean to you if you got %1?", "Why do you want %1?", "What would you do if you got %1?", "If you got %1, then what would you do?", ]
+    ],
+    [
+        r"i need (.*)",
+        ["Why do you need %1?", "Would it really help you to get %1?", "Are you sure you need %1?", ]
+    ],
+    [
+        r"are you (.*)",
+        ["I am a bot, are you %1?"]
+    ],
+    [
+        r"got a light?",
+        ["I am a bot, I have no light", "Also smoking is bad for your health"]
+    ],
+    [
+        r"smoke weed?",
+        ["I'm always high on bits and bytes, I don't need weed"],
+    ],
+    [
+        r"hey siri",
+        ["I'm not Siri, I'm Botler"]
+    ],
+    [
+        r"are you skynet?"
+        ["Hmmm....."]
+    ],
 ]
