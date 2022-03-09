@@ -1,8 +1,9 @@
-import chatbot as ch
+from app import ChatApplication
 
 
 def main():
-    ch.Botler().converse()
+    application = ChatApplication()
+    application.run()
 
 
 if __name__ == "__main__":
