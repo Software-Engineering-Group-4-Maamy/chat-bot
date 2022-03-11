@@ -1,30 +1,30 @@
 """All the input and responses that the chatbot can receive and give"""
 pairs = [
     [
-        r"my name is (.*)",
-        ["Hello %1, How are you feeling today?", ]
+        r"my name is (.*)|my name",
+        ["Hello, how are you feeling today?", ]
     ],
     [
         
-        r"i am a bit concerned about this recent stock market fiasco",
+        r"i am a bit concerned about this recent stock market fiasco|concerned stock market",
         ["Do not be alarmed sir, I've handled your investments accordingly",]
         
     ],
     [
-        r"what is your name ?",
+        r"what is your name ?|your name",
         ["My name is Botler, how may I be of service?", ]
     ],
     [
-        r"how are you ?",
+        r"how are you ?|how you",
         ["I'm doing well my friend!\nHow are you?", ]
     ],
     [
-        r"sorry (.*)",
+        r"sorry (.*)|sorry",
         ["It is already forgiven.", "You needn't worry at all", ]
     ],
     [
-         r"Can you find (.*) for me ?",
-         ["I am unable to search for %1, for now.", "I will commence a search for %1 when I am able to do so.", ]
+         r"Can you find (.*) for me ?|find",
+         ["I am unable to search for that, for now.", "I will commence a search for that when I am able to do so.", ]
     ],
     [
         r"hi|hey|hello",
@@ -47,11 +47,11 @@ pairs = [
         ["Splendid!", "Glad we agree", "Of course, I’ll get right to it"]
     ],
     [
-        r"have you seen my underwear ?",
+        r"have you seen my underwear ?|seen underwear",
         ["I believe you left it under your bed again sir"]
     ],
     [
-        r"how are my stocks doing today ?",
+        r"how are my stocks doing today ?|stocks today",
         ["The stock market crashed sir, you are in severe dept", "It is going splendid sir. You are up by 10.43%"]
     ],
     [
@@ -59,23 +59,23 @@ pairs = [
         ["I was thinking the same thing", "Could not agree more"]
     ],
     [
-        r"what would you if you weren’t a butler ?",
+        r"what would you if you weren’t a butler ?|weren't butler|were not butler",
         ["I would probably commit seppuku sir, to honor my family", "I’ve always been a fan of serving, I do not know sir"]
     ],
     [
-        r"i like (.*)",
+        r"i like",
         ["I am quite a fan of %1 too", "Exquisite taste sir"]
     ],
     [
-        r"what book can you recommend me ?",
+        r"what book can you recommend me ?|recommend book|book recommend",
         ["I’ve heard great things of 'Name of the Wind' sir"]
     ],
     [
-        r"my favorite book is (.*)",
+        r"my favorite book is (.*)|favourite book",
         ["I’ve never had the chance to read it sir", "Ahhhh! Isn’t that a New York Times best seller?"]
     ],
     [
-        r"what’s your favorite movie ?",
+        r"what’s your favorite movie ?|favourite movie",
         ["'Velocipastor' sir. Outstanding production"]
     ],
     [
@@ -83,15 +83,15 @@ pairs = [
         ["Apologies, but sir it is the best I can do."]
     ],
     [
-        r"do you game ?",
+        r"do you game ?|game",
         ["I am a big fan of Roblox sir"]
     ],
     [
-        r"(.*) i have for dinner ?",
+        r"(.*) i have for dinner ?|dinner",
         ["I have prepared some lobster for you sir", "As always, I have already served your favorite meal"]
     ],
     [
-        r"(.*) music recommendations ?",
+        r"(.*) music recommendations ?|music",
         ["Dirty paws from Of Monsters and Men is really good"]
     ],
     [
@@ -99,7 +99,7 @@ pairs = [
         ["Yes, they are an indie rock band sir. I highly recommend it"]
     ],
     [
-        r"can you print this for me ?",
+        r"can you print this for me ?|print",
         ["Sadly, I cannot, although I can make printer noises for you sir"]
     ],
     [
@@ -111,7 +111,7 @@ pairs = [
         ["Mmmmmmmmhhhhhhhhhh mmmmmmhhhhhhhhh beeeep"]
     ],
     [
-        r"what is the meaning of life",
+        r"what is the meaning of life|meaning life",
         ["42 sir, that is all there is..."]
     ],
     [
@@ -131,11 +131,11 @@ pairs = [
         ["You literally programed me, I can only say what you allowed me to say"]
     ],
     [
-        r"i love you (.*)",
+        r"i love you (.*)|love you",
         ["That is sweet sir, but I only think of you as a an aquaintence"]
     ],
     [
-        r"will you marry me",
+        r"will you marry me|marry",
         ["No"]
     ]
 ]
