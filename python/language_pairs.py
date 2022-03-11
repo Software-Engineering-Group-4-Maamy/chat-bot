@@ -63,7 +63,7 @@ pairs = [
         ["I would probably commit seppuku sir, to honor my family", "I’ve always been a fan of serving, I do not know sir"]
     ],
     [
-        r"i like",
+        r"i like (.*)",
         ["I am quite a fan of %1 too", "Exquisite taste sir"]
     ],
     [
