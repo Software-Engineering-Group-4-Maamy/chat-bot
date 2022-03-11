@@ -59,12 +59,29 @@ Botler responds this way because Botler does not understand capital letters. The
         B:Sorry sir, I didn't understand
 Botler responds this way because Botler cannot recognize a phraze that is not exactly the same as what it uses as examples.
 ## Class Organization
-1. Botler:
-The Botler class is incharge of creating and maintaining all aspects of the chat object imported from the NLTK.
+1. ***Botler:***
+The Botler class is in charge of creating and maintaining all aspects of the chat object imported from the NLTK.
 
-The Botler class has two members within it. `def __init__(self)` and `def converse(self)`. 
+The Botler class has three members within it. `def __init__(self)`, `def converse(self)` and `def generate_response(self, msg)`. 
 
-The `def __init__(self)` member acts as the Constructor for the Botler object. It creates the chat object as well.
+`__init__(self)` member acts as the Constructor for the Botler object. It creates the chat object as well.
 
-The `def converse(self)` member starts the conversation with a custome message. It also includes all of the error handling and logic required for the main conversation to take place with the chat bot
+`converse(self)` is now deprecated. But it used to start the conversation with a custom message. It also includes all of the error handling and logic required for the main conversation to take place with the chat bot.
 to start a conversation, write this line of code: `ch.Botler().converse()`
+
+`generate_response(self, msg)` generates a response for a specific message inputted by the user. 
+
+2. ***ChatApplication:***
+The ChatApplication class is in charge of creating and managing the application. That is it creates the corresponding GUI elements and then manages them. This class was adapted from the MIT licensed project titled <a href=https://github.com/python-engineer/python-fun>***Python Fun***</a> Under `python-fun/chatbot-gui/app.py`. 
+
+This class has `_insert_message(self, msg, sender), _on_enter_pressed(self, event), run(self), _init_window(self), __init__(self)`
+
+`_insert_message(self, msg, sender)` inserts a message to the GUI given a message and the name of the sender.
+
+`_on_enter_pressed(self, event)` calls `_insert_message(self, msg, sender)` with the user's message and generates a response from the chatbot.
+
+`run(self)` initiates the program by creating the window and starting the chatbot. It is the only public member of the class.
+
+`_init_window(self)` creates the GUI and initializes all settings.
+
+`__init__(self)` calls `_init_window(self)`, and initialises `Botler` in order to run the app.
