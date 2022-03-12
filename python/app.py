@@ -55,6 +55,10 @@ class ChatApplication:
     def _on_enter_pressed(self, event):
         """If user submits its message, it processes the input to generate a response"""
         msg = self.msg_entry.get()
+
+        if not msg:
+            return
+
         self._insert_message(msg, "You")
         response = self.chat.generate_response(msg.lower())
         self._insert_message(response, self.chat.name)
