@@ -14,33 +14,33 @@ def generate_token(msg):
     return " ".join(tokens_without_sw)
 
 def Detect_Synonym(msg):
-    text_tokens = msg.split()
+    text_tokens = msg.split()                           ## tokenizes based on spaces, does not make `'` a separate token
     pair_tokens = []
     for elem in pairs:
         pair_tokens.append(elem[0].split())
 
     new_input = []
     for elem in pair_tokens:
-        if len(elem) is not len(text_tokens): ## checks token length of user input, and makes sure it matches expected pair (EP)input
+        if len(elem) is not len(text_tokens):           ## checks token length of user input, and makes sure it matches expected pair (EP)input
             continue
         
         new_input = []
-        for i in range(len(text_tokens)):              ##loops through each work/token in EP input 
+        for i in range(len(text_tokens)):               ## loops through each work/token in EP input 
             if elem[i] == text_tokens[i]:                         
-                new_input.append(elem[i])
+                new_input.append(elem[i])               ## if the the two words match, add to  
             else:
-                for syn in wordnet.synsets(elem[i]):
+                for syn in wordnet.synsets(elem[i]):    ## if they do not match, loop thru EP input word synonyms, 
                     found = False
 
                     for l in syn.lemmas():
-                        if l.name() == text_tokens[i]:
-                            new_input.append(elem[i])
+                        if l.name() == text_tokens[i]:  ## if the proposed synonym matches the user input
+                            new_input.append(elem[i])   ## add the synonym to te new_input, then break out of two loops
                             found = True
                             break
                     if found:
                         break
 
-    return " ".join(new_input)
+    return " ".join(new_input)                          ## Makes the new_input list a string unput
 
 
 class Botler:
@@ -73,11 +73,5 @@ class Botler:
 
         # Print polarity score of message
         print(clean_input, self.sentiment_analyzer.polarity_scores(clean_input), sep=": ")
-
         return response if response else "Sorry sir, I didn't understand"
 
-
-
-    # Very basically I want to take an INPUT and create an array of inputs that is the length of each words synonyms multiplied together.
-        ## For example, have you seen my underwear -> have you witnessed my underware, have you witnessed my undergarmnets and so on.
-        ## how to parse out each 'possible sysnonym' word, I am not sure. I could do all of the
