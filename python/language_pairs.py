@@ -6,7 +6,7 @@ pairs = [
     ],
     [
         
-        r"i am a bit concerned about this recent stock market fiasco|concerned stock market|(.*) concerned stock market|concerned stock market (.*)",
+        r"i am a bit concern about this recent stock market fiasco|concerned stock market|(.*) concerned stock market|concerned stock market (.*)",
         ["Do not be alarmed sir, I've handled your investments accordingly",]
         
     ],
