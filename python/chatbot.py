@@ -10,6 +10,7 @@ def generate_token(msg):
     """Tokenize response and remove all stop words to simplify the statement"""
     text_tokens = wordpunct_tokenize(msg)
     tokens_without_sw = [word for word in text_tokens if not word in stopwords]
+    print("Generated tokens: ", " ".join(tokens_without_sw))
     return " ".join(tokens_without_sw)
 
 
