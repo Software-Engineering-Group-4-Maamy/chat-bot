@@ -65,7 +65,7 @@ $RECYCLE.BIN/
 .idea/**/shelf
 .idea/*
 *.pyc
-
+python/test.py
 # AWS User-specific
 .idea/**/aws.xml
 
