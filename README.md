@@ -58,6 +58,16 @@ A2: Terminal Conversation Flow
         B:I cannot say, an hour, a week maybe a decade.  You must find it in yourself to wait
         U:quit
         B:Thank you for chatting with me
+	
+## A3: Data Flow Diagrams
+
+### Level 0:
+
+![DFD Level 0](./python/DFD_level0.png)
+
+### Level 1:
+
+![DFD Level 0](./python/DFDLevel1.png)
 
 Improved A3: GUI Conversation Flow
 
@@ -90,7 +100,13 @@ Botler responds this way because Botler cannot recognize a phraze that is not ex
 
 4. Unit Testing: Added unit tests for ```chatbot.py``` and ```app.py``` in the ```test_chatbot.py``` and ```test_app.py``` files respectively. These test whether the classes have been initialized correctly and whether the methods are working as expected.
 
-5. Further Prospective API abilities
+5. Phrasal: Botler now handles all types of input regardless of the exact wording of the statement.
+
+        
+        U: Sorry BolTer I didnt know
+        Botler: You needn't worry at all
+
+6. Further Prospective API abilities
  
 	1) Autocorrect Function: The Botler could be utilized as a polite bot for implementing autocorrect.	
 	2) Speech analysis: Understanding Speech patterns when learning a new language can be difficult. This process can be made easier by using Botlers synonym recognizer, allowing the identification of similar sentiments even when a different word is used. 
