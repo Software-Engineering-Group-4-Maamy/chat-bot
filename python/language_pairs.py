@@ -31,10 +31,6 @@ pairs = [
         ["Salutations!", "Greetings!", ]
     ],
     [
-        r"quit",
-        ["Farewell, have a fantastic day ", "Until we speak again."]
-    ],
-    [
         r"is your name alfred ?",
         ["Unfortunately not sir, my name is Bot-ler"]
     ],

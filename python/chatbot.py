@@ -70,9 +70,17 @@ class Botler:
         if not response:
             response = self.chat.respond(Detect_Synonym(clean_input))
 
+        # Getting sia_value to hold the dictionary from polarity_scores
+        sia_value = self.sentiment_analyzer.polarity_scores(clean_input) 
 
+        # sia_value['compound'] holds overall sentiment. 
 
-        # Print polarity score of message
-        print(clean_input, self.sentiment_analyzer.polarity_scores(clean_input), sep=": ")
-        return response if response else "Sorry sir, I didn't understand"
-
+        if response:
+            return response
+        elif sia_value['compound'] <= -0.5:
+            return("I'm sorry you feel that way, but I am\nunable to fix this for you.\nPlease ask something different.")
+        elif sia_value['compound'] >= 0.5:
+            return("I'm happy to hear that sir,\nalthough I don't quite know what to do with that\ninformation.\nWould you mind asking something else?")
+        else:
+            return("I didn't quite hear that sir,\nwould you mind repeating that?")
+        
