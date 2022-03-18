@@ -1,9 +1,15 @@
 # M.A.A.M.Y's Chat Bot
 Software Engineering Term 2, 2022
 
-Our group has decide to create a chatbot using python. We have used the <a href="https://www.nltk.org/" target="_blank">***NLTK***</a> python Library in order to create our chatbot. The bot will be taking the role of a sassy, well educated, butler with a good scence of humour, meanwhile the user will take the role of its master. The bbroject has a simple input output system that works directly from the terminal, and is not very versatile, requiring exact input - Future revisions and additions could improve versatility. The bot is capabble of sustaining a simple conversation for a minimum of 30 turns. 
+Our group has decide to create a chatbot using python. We have used the <a href="https://www.nltk.org/" target="_blank">***NLTK***</a> python Library in order to create our chatbot. The bot will be taking the role of a sassy, well educated, butler with a good scence of humour, meanwhile the user will take the role of its master.
 
-The MIT liscence is in this same direcory and is named <a href="https://github.com/Software-Engineering-Group-4-Maamy/chat-bot/blob/main/LICENSE" target="_blank">LICENSE</a>. 
+In A3 we have made significant in terms of user experience with new GUI and also technical improvements in the conversation flow with help of sentiment analysis and autocorrect for spelling mistakes, which was not possible in our previous A2 version of the bot.
+
+As we promised in the A2 version, "Future revisions and additions could improve versatility", we have delivered on that promise.
+
+You can find a list of the features and improvements in A3 [here](#a3-features-and-improvements).
+
+The MIT liscence is in this same direcory and is named <a href="https://github.com/Software-Engineering-Group-4-Maamy/chat-bot/blob/main/LICENSE" target="_blank">LICENSE</a>.
 
 ## Instalation guide
 1. First, install <a href="https://pip.pypa.io/en/stable/installation/">pip</a> if you have not already
@@ -13,6 +19,8 @@ The MIT liscence is in this same direcory and is named <a href="https://github.c
 5. Vouala - you now own a human soul.
 
 ## Sample output
+
+A2: Terminal Conversation Flow
 
         B:Hi, I'm Botler want to have a conversation with you!
         B:Please speak to me in lowercase English. Type quit if you wish to end this conversation. 
@@ -50,15 +58,49 @@ The MIT liscence is in this same direcory and is named <a href="https://github.c
         B:I cannot say, an hour, a week maybe a decade.  You must find it in yourself to wait
         U:quit
         B:Thank you for chatting with me
-### Errors in output
-        U:that was MEAN
-        B:Sorry sir, I didn't understand
-Botler responds this way because Botler does not understand capital letters. The user must put all inputs as lowercase english
 
+Improved A3: GUI Conversation Flow
+
+![GUI Image](./python/demo_ss.png)
+
+As you can see, we can now handle upper case but also mixed case.
+### Errors in output
         U:what's your favotite movie
         B:Sorry sir, I didn't understand
 Botler responds this way because Botler cannot recognize a phraze that is not exactly the same as what it uses as examples.
+
+## A3: Features and improvements
+
+1. Case Handling: Botler now handles all types of cases lower, upper and mixed case.
+
+        
+        U: MY NaMe IS YasH
+        Botler: Hello, how are you feeling today?
+        
+
+2. Sentiment Analysis: Botler now uses the <a href="https://www.nltk.org/api/nltk.sentiment.html" target="_blank">nltk.sentiment</a> to determine the sentiment of the user's input.
+
+        U: THAT WAS MEAN
+        B: I am doing my best to be polite, you are just making it difficult
+
+3. Autocorrect: Botler now uses the ```Speller``` class from  <a href=https://github.com/filyp/autocorrect target="_blank">autocorrect</a> to correct the spelling of the user's input.
+        
+        U: Hellooo
+        B: Salutations!
+
+4. Unit Testing: Added unit tests for ```chatbot.py``` and ```app.py``` in the ```test_chatbot.py``` and ```test_app.py``` files respectively. These test whether the classes have been initialized correctly and whether the methods are working as expected.
+
+5. Further Prospective API abilities
+ 
+	1) Autocorrect Function: The Botler could be utilized as a polite bot for implementing autocorrect.	
+	2) Speech analysis: Understanding Speech patterns when learning a new language can be difficult. This process can be made easier by using Botlers synonym recognizer, allowing the identification of similar sentiments even when a different word is used. 
+	3) Sentiment Analysis: Botler has an advanced understanding of the English lexicon and can help a user understand the tone of one’s email. 
+	4) Continuous Chat: Botlers ability to handle long drawn out conversations can be utilized to handle email conversations you just really don’t want to have.
+	5) Unique Dialogue Library: Botler can handle all your automated messages through use of its language library. This could be implanted as an API so that an email gets forwarded to it and the library would allow Botler to select the correct, and polite, reply. 
+
+
 ## Class Organization
+
 1. ***Botler:***
 The Botler class is in charge of creating and maintaining all aspects of the chat object imported from the NLTK.
 
