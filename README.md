@@ -59,6 +59,10 @@ A2: Terminal Conversation Flow
         U:quit
         B:Thank you for chatting with me
 	
+## A3: Git Commit Graph
+
+![Git Commit Graph](./python/CommitGraphA3.png)
+	
 ## A3: Data Flow Diagrams
 
 ### Level 0:
