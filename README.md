@@ -7,7 +7,7 @@ In A3 we have made significant in terms of user experience with new GUI and also
 
 As we promised in the A2 version, "Future revisions and additions could improve versatility", we have delivered on that promise.
 
-You can find a list of the features and improvements in A3 [here](#a3-features-and-improvements).
+In assignment 4 we separated and each team member worked on furthering the chatbot individually. You can find a list of the features and improvements in A4 further down in the document.
 
 The MIT liscence is in this same direcory and is named <a href="https://github.com/Software-Engineering-Group-4-Maamy/chat-bot/blob/main/LICENSE" target="_blank">LICENSE</a>.
 
@@ -106,7 +106,6 @@ Botler responds this way because Botler cannot recognize a phraze that is not ex
 More details about unit testing can be found [here](#unit-testing).
 
 5. Phrasal: Botler now handles all types of input regardless of the exact wording of the statement.
-
         
         U: Sorry BolTer I didnt know
         Botler: You needn't worry at all
@@ -119,13 +118,29 @@ More details about unit testing can be found [here](#unit-testing).
 	4) Continuous Chat: Botlers ability to handle long drawn out conversations can be utilized to handle email conversations you just really don’t want to have.
 	5) Unique Dialogue Library: Botler can handle all your automated messages through use of its language library. This could be implanted as an API so that an email gets forwarded to it and the library would allow Botler to select the correct, and polite, reply. 
 
+## A4: Features and improvements
+
+1. Implemented the Google Translate API using the <a href="https://pypi.org/project/googletrans/" target="_blank">***googletrans***</a> library. Now it is possible to ask the chatbot to translate phrases into the english language.
+        
+        U: Translate Hola amigo, como estas?
+        Botler: Hello friend, how are you?
+
+2. Implemented the wikipedia API using the <a href="https://pypi.org/project/Wikipedia-API/" target="_blank">***wikipedia-api***</a> wrapper module
+        
+        U: Translate Hola amigo, como estas?
+        Botler: Hello friend, how are you?
+
+### Some Limitations
+1. The googletrans APi is only being used to translate from other languages into english, not the other way around.
+
+2. Both API's require a key-phrase in order to be triggered, else they are not used. 
 
 ## Class Organization
 
 1. ***Botler:***
 The Botler class is in charge of creating and maintaining all aspects of the chat object imported from the NLTK.
 
-The Botler class has three members within it. `def __init__(self)`, `def converse(self)` and `def generate_response(self, msg)`. 
+The Botler class has five members within it. `def __init__(self)`, `def converse(self)`, `def generate_response(self, msg)`, `_translate_input(self, msg)` and `_search_wikipedia(self, msg)`. 
 
 `__init__(self)` member acts as the Constructor for the Botler object. It creates the chat object as well.
 
@@ -133,6 +148,10 @@ The Botler class has three members within it. `def __init__(self)`, `def convers
 to start a conversation, write this line of code: `ch.Botler().converse()`
 
 `generate_response(self, msg)` generates a response for a specific message inputted by the user. 
+
+`_translate_input(self, msg)` translates the given message to the english language. It is only called if the dialogue starts with "translate"
+
+`_search_wikipedia(self, msg)` searches wikipedia using the tokenization of the message, it returns a string with the output. This function is only called if the message contains the string: "search wikipedia for:"
 
 2. ***ChatApplication:***
 The ChatApplication class is in charge of creating and managing the application. That is it creates the corresponding GUI elements and then manages them. This class was adapted from the MIT licensed project titled <a href=https://github.com/python-engineer/python-fun>***Python Fun***</a> Under `python-fun/chatbot-gui/app.py`. 
