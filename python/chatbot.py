@@ -1,4 +1,3 @@
-import googletrans
 from autocorrect import Speller
 from nltk.chat.util import Chat, reflections
 from nltk.tokenize import wordpunct_tokenize
@@ -7,6 +6,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from language_pairs import pairs
 from nltk.corpus import wordnet
 from googletrans import Translator
+import wikipediaapi
 
 
 def generate_token(msg):
@@ -58,6 +58,17 @@ class Botler:
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
         self.speller = Speller()
         self.translator = Translator()
+        self.wiki = wikipediaapi.Wikipedia('en')
+
+    def _search_wikipedia(self, msg: str):
+        """Search wikipedia for a given page, returns summary if it exists, and link, else it returns an error"""
+        page = self.wiki.page(msg)
+
+        if not page.exists():
+            return "I couldn't find a page about that in wikipedia, sorry sir"
+
+        return f'Here is the page for {page.title} on wikipedia:\n{page.summary[0:100]}...\n\nIf you are curious sir, you can read more ' \
+               f'here: {page.fullurl} '
 
     def _translate_input(self, msg: str):
         """Returns a translation of the given text into the english language"""
@@ -73,7 +84,11 @@ class Botler:
         # Correct any spelling mistakes
         clean_input = self.speller(msg)
 
-        # If the first word of the message is 'translate', translate the input
+        # Search wikipedia for the page
+        if "search wikipedia for" in clean_input:
+            new_input = clean_input.replace("search wikipedia for", "")
+            tokens_without_sw = generate_token(new_input)
+            return self._search_wikipedia(tokens_without_sw)
 
         # Generate a response from the chatbot
         response = self.chat.respond(clean_input)
